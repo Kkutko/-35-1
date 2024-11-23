@@ -1,0 +1,352 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Home</title>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/grid.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/camera.css">
+    <link rel="stylesheet" href="css/booking.css">
+    <link rel="stylesheet" href="css/fl-chapps.css">
+    <link rel="stylesheet" href="css/jquery.fancybox.css">
+    <link rel="stylesheet" href="css/google-map.css">
+
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery-migrate-1.2.1.js"></script>
+
+    <!--[if lt IE 9]>
+    <html class="lt-ie9">
+    <div style=' clear: both; text-align:center; position: relative;'>
+        <a href="http://windows.microsoft.com/en-US/internet-explorer/..">
+            <img src="images/ie8-panel/warning_bar_0000_us.jpg" border="0" height="42" width="820"
+                 alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."/>
+        </a>
+    </div>
+    <script src="js/html5shiv.js"></script>
+    <![endif]-->
+
+    <script src='js/device.min.js'></script>
+</head>
+
+<body>
+    <div class="page">
+        <!--========================================================
+                              HEADER
+    =========================================================-->
+        <header>
+            <div class="header_cnt">
+                <div class="container center">
+                    <div class="brand">
+                        <h1 class="brand_name">
+                            <a href="./">Fuji Flame</a>
+                        </h1>
+
+                        <p class="brand_slogan">
+                            Відчуй всі смаки японської кухні
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="camera_container">
+                <div class="square"></div>
+                <div class="square2"></div>
+                <div class="cam_cnt1">
+                    <div class="cam_cnt">
+                        <h3>Резервація</h3>
+
+                        <form id="bookingForm" class="booking-form">
+                            <div class="tmInput fl-chapps-user139">
+                                <input name="Імʼя" placeHolder="Повне імʼя" type="text"
+                                    data-constraints='@NotEmpty @Required @AlphaSpecial'>
+                            </div>
+                            <div class="cntr">
+                                <div class="col">
+                                    <div class="tmInput fl-chapps-pen55">
+                                        <input name="Гості" placeHolder="Кількість персон" type="text"
+                                            data-constraints='@NotEmpty @Required @JustNumbers'>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <label class="tmDatepicker fl-chapps-weekly10">
+                                        <input type="text" name="Дата" placeHolder='Дата'
+                                            data-constraints="@NotEmpty @Required @Date">
+                                    </label>
+                                </div>
+                                <div class="col">
+                                    <select name="Time" class="tmSelect manual" data-constraints="@NotEmpty @Required">
+
+                                        <option>Година</option>
+                                        <option>9:00</option>
+                                        <option>12:00</option>
+                                        <option>15:00</option>
+                                        <option>18:00</option>
+                                        <option>21:00</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn">Зарезервувати зараз</button>
+                        </form>
+                    </div>
+
+                </div>
+                <div id="camera" class="camera_wrap">
+                    <div data-src="images/cabagge.JPG">
+                        <div class="camera_caption fadeIn">
+                        </div>
+                    </div>
+                    <div data-src="images/ramen.JPG">
+                        <div class="camera_caption fadeIn">
+
+                        </div>
+                    </div>
+                    <div data-src="images/ramenn.JPG">
+                        <div class="camera_caption fadeIn">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </header>
+        <!--========================================================
+                              CONTENT
+    =========================================================-->
+        <main>
+            <section class="well center">
+                <div class="container">
+                    <h2>Вітальне слово</h2>
+
+                    <h6>Відкрий для себе справжню Японію! Наші кухарі створять для тебе незабутні кулінарні враження з
+                        найсвіжіших інгредієнтів. Затишна атмосфера і приємна музика доповнять твоє вечір.</h6>
+                    <img src="images/silhouette.png" alt="" />
+                </div>
+            </section>
+            <section class="well1 bg-secondary2">
+                <div class="container">
+                    <h2 class="center">Наша філософія</h2>
+                    <ul class="index-list row">
+                        <li class="grid_4 wow fadeInUp">
+                            <h5>Свіжість та натуральність</h5>
+
+                            <p>Використовуємо лише найсвіжіші і найякісніші продукти, вирощені з повагою до природи.
+                            </p>
+                        </li>
+                        <li class="grid_4 wow fadeInUp" data-wow-delay="0.2s">
+                            <h5> Повага до традицій</h5>
+
+                            <p>Вважаємо важливим збереження автентичних рецептів і методів приготування, переданих від
+                                покоління до покоління.</p>
+                        </li>
+                        <li class="grid_4 wow fadeInUp" data-wow-delay="0.4s">
+                            <h5>Майстерність кухаря</h5>
+
+                            <p>Постійне вдосконалення кулінарних навичок, прагнення до досконалості в кожній страві.</p>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="well2 bg-img">
+                <div class="container">
+                    <div class="row">
+                        <div class="grid_4 preffix_7">
+                            <h3 class="media_off_left" style="margin-left:  10 px;"><span>Неймовірний досвід</span>та смачна їжа</h3>
+                            <p class="media_off_left"><strong>Ми віримо, що їжа – це не просто задоволення смакових
+                                    рецепторів, а мистецтво, яке поєднує в собі свіжість природи, гармонію смаків і
+                                    естетику подачі. Кожна страва – це результат майстерності наших кухарів і поваги до
+                                    традицій японської кухні.</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="center well2__ins">
+                <div class="container">
+                    <h2 class="center">фото галерея</h2>
+                </div>
+                <ul class="inline-list">
+                    <li><a class="thumb" href="images/setofsih.JPG" data-fancybox-group="1">
+                            <img src="images/setofsih.JPG" alt="" />
+
+                            <div class="thumb_overlay">
+                                <div class="thumb_overlay_cnt">
+                                    <h4>Набір різноманітної риби</h4>
+
+                                    <p>від звичайного лосося до риби фугу</p>
+                                </div>
+                            </div>
+                        </a></li>
+                    <li><a class="thumb" href="images/sushi.JPG" data-fancybox-group="1">
+                            <img src="images/sushi.JPG" alt="" />
+
+                            <div class="thumb_overlay">
+                                <div class="thumb_overlay_cnt">
+                                    <h4>Суші</h4>
+
+                                    <p>Традиційні суші Японії</p>
+                                </div>
+                            </div>
+                        </a></li>
+                    <li><a class="thumb" href="images/udon.JPG" data-fancybox-group="1">
+                            <img src="images/udon.JPG" alt="" />
+
+                            <div class="thumb_overlay">
+                                <div class="thumb_overlay_cnt">
+                                    <h4>Удон</h4>
+
+                                    <p>З ововчевою начинкою </p>
+                                </div>
+                            </div>
+                        </a></li>
+                    <li><a class="thumb" href="images/soba.JPG" data-fancybox-group="1">
+                            <img src="images/soba.JPG" alt="" />
+
+                            <div class="thumb_overlay">
+                                <div class="thumb_overlay_cnt">
+                                    <h4>Соба</h4>
+
+                                    <p>Гречнева локшина на будь-який смак</p>
+                                </div>
+                            </div>
+                        </a></li>
+                    <li><a class="thumb" href="images/ramenn.JPG" data-fancybox-group="1">
+                            <img src="images/ramenn.JPG" alt="" />
+
+                            <div class="thumb_overlay">
+                                <div class="thumb_overlay_cnt">
+                                    <h4>Рамен</h4>
+
+                                    <p>З яловичиню або свининою</p>
+                                </div>
+                            </div>
+                        </a></li>
+                    <li><a class="thumb" href="images/soup.JPG" data-fancybox-group="1">
+                            <img src="images/soup.JPG" alt="" />
+
+                            <div class="thumb_overlay">
+                                <div class="thumb_overlay_cnt">
+                                    <h4>Тамагоякі</h4>
+
+                                    <p>Японське універсальне блюдо</p>
+                                </div>
+                            </div>
+                        </a></li>
+                </ul>
+            </section>
+            <section class="well3">
+                <div class="container">
+                    <h2 class="center">Новини та події</h2>
+
+                    <div class="row">
+                        <div class="grid_4 bord ins wow fadeInUp">
+                            <time datetime="2024-12-10">10 грудня 2024</time>
+                            <p class="mod">Дегустація сашимі з шефом з Токіо</p>
+                        </div>
+                        <div class="grid_4 bord ins wow fadeInUp" data-wow-delay="0.4s">
+                            <time datetime="2024-12-10">13 грудня 2024</time>
+                            <p class="mod">Живий концерт у залі.</p>
+                        </div>
+                        <div class="grid_4 bord ins wow fadeInUp" data-wow-delay="0.6s">
+                            <time datetime="2024-12-10">18 грудня 2024</time>
+                            <p class="mod">Свято на честь 10 років ресторану </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="well4 bg-primary">
+                <div class="container">
+                    <div class="row">
+                        <div class="grid_6 wow fadeInLeft">
+                            <img src="images/ramen.JPG" alt="" />
+                        </div>
+                        <div class="grid_6 wow fadeInRight">
+                            <h3><span>Страва дня</span>
+
+                                Суп рамен із свининою</h3>
+
+                            <p class="off">Рамен складається з пшеничного локшини в бульйоні, зверху якого можуть класти
+                                різні добавки: по-особливому приготовлена ​​свинина, звана тясю, камабоко; соління
+                                (цукемоно): пагони бамбука (мема), мариновані гриби шиїтаке, паростки бобів мунг і такі
+                                овочі як шпинат, зелена цибуля або комацуна (сорт китайської капусти). Іноді в рамен
+                                додається нарутомаки (вид камабоко) або саме камабоко, норі та яйця (варені або
+                                смажені).</p>
+
+                            <p>Смачного!</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!--========================================================
+                              FOOTER
+    =========================================================-->
+        <footer>
+            <div class="footer_cnt">
+                <div class="container">
+                    <h2 class="center">Засновники</h2>
+
+                    <div class="row">
+                        <div class="grid_6 shadow bg-primary wow fadeInLeft">
+                            <blockquote class="box">
+                                <div class="box_aside">
+                                    <img src="images/founder.jpg" alt="" />
+                                </div>
+                                <div class="box_cnt__no-flow">
+                                    <cite>Андрея Марело</cite>
+                                    <q><span>“</span>Головна шеф-кухар у ресторні</q>
+                                </div>
+                            </blockquote>
+                        </div>
+                        <div class="grid_6 shadow bg-primary wow fadeInRight">
+                            <blockquote class="box">
+                                <div class="box_aside">
+                                    <img src="images/founder2.jpg" alt="" />
+                                </div>
+                                <div class="box_cnt__no-flow">
+                                    <cite>Мартні Шепард</cite>
+                                    <q><span>“</span>Су-шеф ресторану та його представник </q>
+                                </div>
+                            </blockquote>
+                        </div>
+                    </div>
+                    <address class="center">Хрещатик. Місто Київ <br />
+                        01001
+                    </address>
+                    <div class="inline-list2_wrap bord center">
+                        <ul class="inline-list2">
+                            <li><a class="fa-twitter" href="#"></a></li>
+                            <li><a class="fa-facebook-f" href="#"></a></li>
+                            <li><a class="fa-google-plus" href="#"></a></li>
+                            <li><a class="fa-rss" href="#"></a></li>
+                            <li><a class="fa-pinterest" href="#"></a></li>
+                            <li><a class="fa-linkedin" href="#"></a></li>
+                        </ul>
+                    </div>
+                    <div class="copyright center">
+                        © <span id="copyright-year"></span> |
+
+                        <!-- {%FOOTER_LINK} -->
+                    </div>
+                </div>
+            </div>
+            <div class="map">
+                <div class="square3"></div>
+                <div id="google-map" class="map_model" data-zoom="13"></div>
+                <ul class="map_locations">
+                    <li data-x="-73.9874068" data-y="40.643180">
+                        <p> 9870 St Vincent Place, Glasgow, DC 45 Fr 45. <span>800 2345-6789</span></p>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/script.js"></script>
+
+    <!--coded by Morpeh-->
+
+</body>
+
+</html>
